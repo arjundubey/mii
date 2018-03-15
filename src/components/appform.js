@@ -18,12 +18,18 @@ class AppForm extends Component{
          });
   };
   onSubmit = e=>{
-    console.log(this.state)
+    //console.log(this.state)
     e.preventDefault();
     this.props.onSubmit(this.state);
-    
+    this.setState({
+        Firstname:'',
+        Lastname:'',
+        Username:'',
+        Password:'',
+        email:'',
+    });
    
-  }
+  };
 
    render(){
       

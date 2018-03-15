@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import LoginForm from './LoginForm';
-import {BrowserRouter,Route,Switch} from 'react-router-dom';
+import LoginForm from './components/login';
+import { BrowserRouter, Route,Switch } from 'react-router-dom';
 import App from './App';
  
 
@@ -9,7 +9,7 @@ const Router=()=>(
   
     <Switch>
 <Route exact path="/"  component={LoginForm}/>
-<Route path="./components/login" component={LoginForm}/>
+<Route path="/login" component={LoginForm}/>
      </Switch>
 
 

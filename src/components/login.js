@@ -7,17 +7,22 @@ class LoginForm extends React.Component{
         
       };
 
+    
+
+
+
+
       render(){
         
           return(
               
               <form>
-                <input placeholder='Username'                   defaultValue={this.state.Username}  /> <br />
+                <input placeholder='Username'                   defaultValue={this.state.Username}/> <br />
                 <input placeholder='Password' type='Password'   defaultValue={this.state.Password}/>
                 
                  <br />
                 <button onClick={e =>this.onSubmit(e)} > Submit</button>
-
+                
 
               </form>
 

@@ -34,7 +34,9 @@ class AppForm extends Component{
    render(){
       
        return(
+
        	<form>
+         
          <input
          name='Firstname'
           placeholder='Firstname' 

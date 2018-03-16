@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 
 class LoginForm extends React.Component{
 	state = { 
-        Username:'',
-        Password:'',
-        
-      };
+        username:'',
+        password:'',
+        };
 
     
+ onSubmit=(e)=>{
+   e.preventDefault();
+   
+   console.log(this.state);
 
+ };
 
 
 
@@ -17,11 +21,16 @@ class LoginForm extends React.Component{
           return(
               
               <form>
-                <input placeholder='Username'                   defaultValue={this.state.Username}/> <br />
-                <input placeholder='Password' type='Password'   defaultValue={this.state.Password}/>
+                <input placeholder='username'                
+                   defaultValue={this.state.username}
+                 onChange={e=>this.setState({username:e.target.value})}/> <br />
+
+                <input placeholder='password' type='password'  
+                 defaultValue={this.state.password} 
+                 onChange={e=>this.setState({password:e.target.value})}/>
                
                  <br />
-                <button onClick={e =>this.onSubmit(e)} > Submit</button>
+                <button onClick={e=>this.onSubmit(e)}>Submit</button>
                
 
               </form>
